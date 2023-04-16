@@ -29,6 +29,7 @@ function Layout({ logOut, profile, user }) {
       return;
     }
     navigate(`/notes/${currentNote + 1}/edit`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [notes]);
 
   const saveNote = async (note, index) => {
@@ -115,6 +116,7 @@ function Layout({ logOut, profile, user }) {
   useEffect(() => {
     localStorage.setItem("username", JSON.stringify(user));
     localStorage.setItem("userProfile", JSON.stringify(profile));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   return (

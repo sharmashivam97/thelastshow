@@ -11,6 +11,7 @@ function WriteBox({ edit }) {
   let { noteId } = useParams();
   noteId = noteId ? parseInt(noteId) - 1 : undefined; // parse noteId to int and subtract 1
   const [notes, updateNote, deleteNote] = useOutletContext();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   let currentNote = { title: "", body: "", when: "" };
   if (noteId !== undefined && notes.length > noteId) {
     currentNote = notes[noteId];
